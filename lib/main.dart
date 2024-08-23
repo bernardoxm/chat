@@ -1,3 +1,4 @@
+import 'package:chat/pages/auth_or_app_page.dart';
 import 'package:chat/pages/auth_page.dart';
 import 'package:chat/pages/loading_page.dart';
 import 'package:flutter/material.dart';
@@ -17,9 +18,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
       
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
+        primarySwatch: Colors.blue,
         useMaterial3: true,
+        appBarTheme: AppBarTheme(color: Colors.blue, titleTextStyle: TextStyle(color: Colors.white, fontSize: 20),),
       ),
-      home: const AuthPage(),
+      home:  AuthOrAppPage(),
       debugShowCheckedModeBanner:  false,
     );
   }
