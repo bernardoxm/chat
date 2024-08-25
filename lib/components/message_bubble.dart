@@ -7,13 +7,15 @@ class MessageBubble extends StatelessWidget {
   static const _defultImage = 'assets/image/avatar.png';
   final ChatMessage message;
   final bool belongsToCurrentUser;
+  
 
   const MessageBubble(
-      {super.key, required this.message, required this.belongsToCurrentUser});
+      {super.key, required this.message, required this.belongsToCurrentUser,});
 
   Widget _showUserImage(String ImageUrl) {
     ImageProvider? provider;
     final uri = Uri.parse(ImageUrl);
+   
 
     if (uri.path.contains('assets/image/avatar.png')) {
       provider = const AssetImage(_defultImage);
@@ -40,7 +42,7 @@ class MessageBubble extends StatelessWidget {
             Container(
                 decoration: BoxDecoration(
                   color: belongsToCurrentUser
-                      ? Colors.green.shade600                      : Colors.blue,
+                      ? const Color.fromARGB(230, 67, 160, 113)                      : Color.fromARGB(255, 53, 96, 142),
                   borderRadius: BorderRadius.only(
                     topLeft: const Radius.circular(12),
                     topRight: const Radius.circular(12),
@@ -64,7 +66,7 @@ class MessageBubble extends StatelessWidget {
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
                           color: belongsToCurrentUser
-                              ? Colors.black
+                              ? const Color.fromARGB(255, 255, 255, 255)
                               : Colors.white),
                     ),
                     Text(
@@ -72,11 +74,17 @@ class MessageBubble extends StatelessWidget {
                       textAlign:  belongsToCurrentUser ? TextAlign.right : TextAlign.left,
                       style: TextStyle(
                           color: belongsToCurrentUser
-                              ? Colors.black
+                              ? const Color.fromARGB(255, 255, 255, 255)
                               : Colors.white),
                     ),
+
+                    
                   ],
                 )),
+                   
+                  
+                
+              
           ],
         ),
         Positioned(

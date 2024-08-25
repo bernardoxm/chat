@@ -9,6 +9,7 @@ class Messages extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+   
     final currentUser = AuthService().currentUser;
     // TODO: implement build
     return StreamBuilder<List<ChatMessage>>(
@@ -28,8 +29,7 @@ class Messages extends StatelessWidget {
             itemBuilder: (ctx, i) => MessageBubble(
               key: ValueKey(msgs[i].id),
               message: msgs[i],
-              belongsToCurrentUser: currentUser?.id == msgs[i].userId,
-            ),
+              belongsToCurrentUser: currentUser?.id == msgs[i].userId,            ),
             itemCount: msgs!.length,
           );
         }

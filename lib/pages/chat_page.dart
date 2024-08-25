@@ -12,7 +12,8 @@ class ChatPage extends StatelessWidget {
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Chat'),
+    centerTitle: true, 
+        title: const Text('Chat Team', textAlign: TextAlign.center,),
         actions: [
           DropdownButton(
             icon: const Icon(

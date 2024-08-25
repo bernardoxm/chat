@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         primarySwatch: Colors.blue,
         useMaterial3: true,
-        appBarTheme: AppBarTheme(color: Colors.blue, titleTextStyle: TextStyle(color: Colors.white, fontSize: 20),),
+        appBarTheme: const AppBarTheme(color: Color.fromARGB(255, 53, 96, 142), titleTextStyle: TextStyle(color: Colors.white, fontSize: 20),),
       ),
       home:  AuthOrAppPage(),
       debugShowCheckedModeBanner:  false,
