@@ -47,7 +47,7 @@ class _UserImagePickerState extends State<UserImagePicker> {
               children: [
                 Icon(
                   Icons.image,
-                  color: Colors.blue,
+                  color: Colors.pinkAccent,
                 ),
                 SizedBox(width: 10,),
                 Text('Adicionar image')

@@ -105,9 +105,12 @@ class _AuthFormState extends State<AuthForm> {
                 },
               ),
               const SizedBox(height: 12),
-              ElevatedButton(
-                onPressed: _submit,
-                child: Text(_formData.isLogin ? 'Entrar' : 'Cadastrar'),
+              SizedBox( width: MediaQuery.of(context).size.width * 0.7,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(shadowColor: Colors.black),
+                  onPressed: _submit,
+                  child: Text(_formData.isLogin ? 'Entrar' : 'Cadastrar'),
+                ),
               ),
               TextButton(
                 onPressed: () {
