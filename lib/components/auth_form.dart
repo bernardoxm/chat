@@ -55,12 +55,12 @@ class _AuthFormState extends State<AuthForm> {
           child: Column(
             children: [
                 const Image(image: AssetImage('assets/image/logo.png')),
-                SizedBox(height: 15,),
+                const SizedBox(height: 15,),
 
 
               if (_formData.isSignup)
-              Text('Imagem de Perfil'),
-              SizedBox(height: 5,),
+             const Text('Imagem de Perfil'),
+              const SizedBox(height: 5,),
                   if (_formData.isSignup)
                 UserImagePicker(onImagePick: _handleImagePick),
               if (_formData.isSignup)

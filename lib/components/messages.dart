@@ -11,15 +11,15 @@ class Messages extends StatelessWidget {
   Widget build(BuildContext context) {
    
     final currentUser = AuthService().currentUser;
-    // TODO: implement build
+  
     return StreamBuilder<List<ChatMessage>>(
       builder: (cxt, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
-          return Center(
+          return const Center(
             child: CircularProgressIndicator(),
           );
         } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
-          return Center(
+          return const  Center(
             child: Text('Sem dados. Vamos conversar?'),
           );
         } else {

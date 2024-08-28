@@ -8,6 +8,7 @@ class UserImagePicker extends StatefulWidget {
   const UserImagePicker({super.key, required this.onImagePick});
 
   @override
+  // ignore: library_private_types_in_public_api
   _UserImagePickerState createState() => _UserImagePickerState();
 }
 
@@ -31,7 +32,7 @@ class _UserImagePickerState extends State<UserImagePicker> {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
+    
     return  Column(
       children: [
         CircleAvatar(

@@ -6,16 +6,18 @@ import 'package:chat/pages/loading_page.dart';
 import 'package:flutter/material.dart';
 
 class AuthOrAppPage extends StatelessWidget {
+  const AuthOrAppPage({super.key});
+
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
+  
     return Scaffold(
         body: StreamBuilder<ChatUser?>(
             stream: AuthMockService().userChanges,
             builder: (ctx, snapshot) {
               if (snapshot.connectionState == ConnectionState.waiting) {
-                return LoadingPage();
-              }else{ return snapshot.hasData? ChatPage(): AuthPage(); }
+                return const LoadingPage();
+              }else{ return snapshot.hasData? const ChatPage(): const AuthPage(); }
             }));
   }
 }

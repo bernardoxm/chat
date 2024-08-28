@@ -12,6 +12,7 @@ class MessageBubble extends StatelessWidget {
   const MessageBubble(
       {super.key, required this.message, required this.belongsToCurrentUser,});
 
+  // ignore: non_constant_identifier_names
   Widget _showUserImage(String ImageUrl) {
     ImageProvider? provider;
     final uri = Uri.parse(ImageUrl);
@@ -42,7 +43,7 @@ class MessageBubble extends StatelessWidget {
             Container(
                 decoration: BoxDecoration(
                   color: belongsToCurrentUser
-                      ? const Color.fromARGB(230, 67, 160, 113)                      : Color.fromARGB(255, 53, 96, 142),
+                      ? const Color.fromARGB(230, 54, 85, 164)                      : Colors.pinkAccent,
                   borderRadius: BorderRadius.only(
                     topLeft: const Radius.circular(12),
                     topRight: const Radius.circular(12),

@@ -10,6 +10,7 @@ class NewMessages extends StatefulWidget {
 }
 
 class _NewMessagesState extends State<NewMessages> {
+  // ignore: non_constant_identifier_names
   String _Message = '';
 
   final _messageController = TextEditingController();
@@ -24,20 +25,22 @@ class _NewMessagesState extends State<NewMessages> {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    return Row(
-      children: [
-        Expanded(
-            child: TextField(
-          onChanged: (msg) => setState(() => _Message = msg),
-          controller: _messageController,
-          decoration: const InputDecoration(labelText: 'Enviar Mesagem...'),
-          onSubmitted: (_) {if(_Message.trim().isNotEmpty){_sendMessage();}},
-        )),
-        IconButton(
-            onPressed: _Message.trim().isEmpty ? null : _sendMessage,
-            icon: Icon(Icons.send))
-      ],
+
+    return SizedBox(width: MediaQuery.of(context).size.width * 0.9,
+      child: Row(
+        children: [
+          Expanded(
+              child: TextField( cursorColor: Colors.pinkAccent,
+            onChanged: (msg) => setState(() => _Message = msg),
+            controller: _messageController,
+            decoration: const InputDecoration(labelText: 'Enviar Mesagem...'),
+            onSubmitted: (_) {if(_Message.trim().isNotEmpty){_sendMessage();}},
+          )),
+          IconButton(
+              onPressed: _Message.trim().isEmpty ? null : _sendMessage,
+              icon: const Icon(Icons.send), color: Colors.pinkAccent,)
+        ],
+      ),
     );
   }
 }
