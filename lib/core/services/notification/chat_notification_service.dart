@@ -6,7 +6,11 @@ class ChatNotificationService with ChangeNotifier {
   List<ChatNotification> _items = [];
 
   // ignore: unused_element
-  List<ChatNotification> get _tems {
+    int get itemsCount {
+    return _items.length;
+  }
+  // ignore: unused_element
+  List<ChatNotification> get items {
     return [..._items];
   }
 
@@ -14,5 +18,5 @@ class ChatNotificationService with ChangeNotifier {
     _items.add(notification);
     notifyListeners();
   }
-  void remove(int i ){_items.removeAt(i);}
+  void remove(int i ){_items.removeAt(i);notifyListeners();}
 }
