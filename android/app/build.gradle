@@ -1,12 +1,13 @@
 plugins {
     id "com.android.application"
     id "kotlin-android"
-    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    // O Plugin Gradle do Flutter deve ser aplicado após os plugins Android e Kotlin.
     id "dev.flutter.flutter-gradle-plugin"
+    id 'com.google.gms.google-services'  // Firebase plugin
 }
 
- android {
-    namespace = "com.example.chat"
+android {
+    namespace = "br.com.chat.team"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
@@ -20,11 +21,11 @@ plugins {
     }
 
     defaultConfig {
-        applicationId = "com.example.chat"
-        minSdkVersion 23 // Ensure this is 23, not 21
-        targetSdk = flutter.targetSdkVersion
-        versionCode = flutter.versionCode
-        versionName = flutter.versionName
+        applicationId = "br.com.chat.team"
+        minSdkVersion 32  // Firebase Auth requer SDK mínimo de 23
+        targetSdkVersion flutter.targetSdkVersion
+        versionCode flutter.versionCode
+        versionName flutter.versionName
     }
 
     buildTypes {

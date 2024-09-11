@@ -1,3 +1,15 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        implementation platform('com.google.firebase:firebase-bom:33.2.0')
+        implementation 'com.google.firebase:firebase-auth'
+        implementation 'com.google.firebase:firebase-analytics'
+    }
+}
+
 allprojects {
     repositories {
         google()
@@ -5,14 +17,14 @@ allprojects {
     }
 }
 
-rootProject.buildDir = "../build"
+rootProject.buildDir = '../build'
 subprojects {
     project.buildDir = "${rootProject.buildDir}/${project.name}"
 }
 subprojects {
-    project.evaluationDependsOn(":app")
+    project.evaluationDependsOn(':app')
 }
 
-tasks.register("clean", Delete) {
+tasks.register('clean', Delete) {
     delete rootProject.buildDir
 }
