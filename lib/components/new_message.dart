@@ -18,6 +18,7 @@ class _NewMessagesState extends State<NewMessages> {
   Future<void> _sendMessage() async {
     final user = AuthService().currentUser;
     if (user != null) {
+      final msg = 
       await ChatService().save(_Message, user);
       _messageController.clear();
     }

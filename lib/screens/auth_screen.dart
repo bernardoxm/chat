@@ -3,14 +3,14 @@ import 'package:chat/core/models/auth_form_data.dart';
 import 'package:chat/core/services/auth/auth_service.dart';
 import 'package:flutter/material.dart';
 
-class AuthPage extends StatefulWidget {
-  const AuthPage({super.key});
+class AuthScreen extends StatefulWidget {
+  const AuthScreen({super.key});
 
   @override
-  State<AuthPage> createState() => _AuthPageState();
+  State<AuthScreen> createState() => _AuthPageState();
 }
 
-class _AuthPageState extends State<AuthPage> {
+class _AuthPageState extends State<AuthScreen> {
   bool _isLoading = false;
 
   Future<void> _handleSubmit(AuthFormData formData) async {

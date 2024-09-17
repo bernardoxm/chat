@@ -41,6 +41,8 @@ dependencies:
   firebase_auth: ^5.2.0
   firebase_storage: ^12.2.0
   cloud_firestore: ^5.4.0
+  firebase_messaging: ^15.1.1
+
 
 
 
