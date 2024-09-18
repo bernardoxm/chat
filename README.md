@@ -27,3 +27,10 @@ This is a chat application developed using Flutter with Firebase integration. It
 
 Make sure to correctly set up Firebase for your project by following the official documentation.
 
+
+![Simulator Screenshot - iPhone 15 Pro Max - 2024-09-18 at 00 19 13](https://github.com/user-attachments/assets/0e4aa58f-c220-4026-9dfe-e7f87e10760e)
+
+![Simulator Screenshot - iPhone 15 Pro Max - 2024-09-18 at 00 19 35](https://github.com/user-attachments/assets/f0b6a601-d4e6-4f70-8cfc-a67e6b848399)
+
+![image](https://github.com/user-attachments/assets/25ff1ea6-1aaa-48f7-8029-ea2f1076750d)
+
