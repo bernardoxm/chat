@@ -93,7 +93,7 @@ class MessageBubble extends StatelessWidget {
           left: belongsToCurrentUser ? null : 165,
           right: belongsToCurrentUser ? 165 : null,
           child: CircleAvatar(
-            child: _showUserImage(message.userImageURl),
+            child: _showUserImage(message.userImageUrl),
           ),
         ),
       ],

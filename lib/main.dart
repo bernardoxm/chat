@@ -7,23 +7,23 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized(); // Inicializa o Flutter
-  await Firebase.initializeApp(
-    options: Platform.isIOS
-        ? const FirebaseOptions(
-            apiKey: 'AIzaSyDAFlFd3K39bBCT4qKA-iqgf2hZkBj4-Wg',
-            appId: '1:751149769695:ios:22a67dc2ba0b3bded6da6a',
-            messagingSenderId: '751149769695',
-            projectId: 'chat-estudos-f6672',
+   WidgetsFlutterBinding.ensureInitialized(); // Inicializa o Flutter
+   await Firebase.initializeApp(
+     options: Platform.isIOS
+         ? const FirebaseOptions(
+             apiKey: 'AIzaSyDAFlFd3K39bBCT4qKA-iqgf2hZkBj4-Wg',
+             appId: '1:751149769695:ios:22a67dc2ba0b3bded6da6a',
+             messagingSenderId: '751149769695',
+             projectId: 'chat-estudos-f6672',
           )
-        : const FirebaseOptions(
-            apiKey: 'AIzaSyBIZHd4NDwb2T_4klMl6xTHeB076HTmaFA',
-            appId: '1:751149769695:android:f897d747a3a49f35d6da6a',
-            messagingSenderId: '751149769695',
-            projectId: 'chat-estudos-f6672',
+         : const FirebaseOptions(
+             apiKey: 'AIzaSyBIZHd4NDwb2T_4klMl6xTHeB076HTmaFA',
+             appId: '1:751149769695:android:f897d747a3a49f35d6da6a',
+             messagingSenderId: '751149769695',
+             projectId: 'chat-estudos-f6672',
           ),
   );
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
         ),
       ],
       child: MaterialApp(
-        title: 'Flutter Demo',
+        title: 'Chat team',
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.pinkAccent),
           primarySwatch: Colors.blue,

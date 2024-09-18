@@ -39,7 +39,7 @@ class ChatNotificationService with ChangeNotifier {
 
   Future<void> _configureForeground() async {
     if (await _isAuthorized) {
-      FirebaseMessaging.onMessage.listen((_messageHandler) {
+      FirebaseMessaging.onMessage.listen((messageHandler) {
       
       });
     }
@@ -55,7 +55,7 @@ class ChatNotificationService with ChangeNotifier {
  }
   Future<void> _configureBackground() async {
     if (await _isAuthorized) {
-      FirebaseMessaging.onMessageOpenedApp.listen((_messageHandler) {
+      FirebaseMessaging.onMessageOpenedApp.listen((messageHandler) {
       
       });
     }
